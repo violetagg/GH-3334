@@ -22,6 +22,11 @@
 			<artifactId>reactor-core</artifactId>
 			<version>3.5.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.6</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -52,6 +57,10 @@
 						</executions>
 						<configuration>
 							<mainClass>${mainClass}</mainClass>
+							<buildArgs>
+								<buildArg>--verbose</buildArg>
+								<buildArg>--link-at-build-time</buildArg>
+							</buildArgs>
 						</configuration>
 					</plugin>
 				</plugins>
